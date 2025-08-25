@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tú Calle Responde</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #2d6a4f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    header img {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #2d6a4f;
+      border-bottom: 2px solid #95d5b2;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    ul li {
+      padding: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    button {
+      background-color: #40916c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2d6a4f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #d8f3dc;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    a {
+      color: #1b4332;
+    }
+
+    @media screen and (max-width: 600px) {
+      header img {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+<body>
+<div style="background-color:#1b4332;color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;">
+  <div style="font-size:1.5rem;font-weight:bold;">Tú Calle Responde</div>
+  <a href="LOGIN_index.html" 
+  style="background:none;border:1px solid white;color:white;padding:3px 8px;font-size:0.8rem;border-radius:3px;cursor:pointer;text-decoration:none;">🔐 Inicio de sesión</a>
+</div>
+ 
+
+  <header>
+    <h1>Tú Calle Responde</h1>
+    <p>Plataforma para informar problemas en tu zona</p>
+    <img src="sj.jpg" alt="Logo o imagen decorativa">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>Gracias por visitar nuestra página, aquí puedes reportar problemas de infraestructura, baches en las calles, limpieza o seguridad en tu barrio y calles.</p>
+    </section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Zona Norte</li>
+    <li>Zona Sur</li>
+    <li>Zona Este</li>
+    <li>Zona Oeste</li>
+  </ul>
+
+  <div style="text-align:center; margin-top:1rem;">
+    <button onclick="document.getElementById('formulario-servicios').style.display='block'">Menú</button>
+  </div>
+
+
+  <form id="formulario-servicios" style="display:none; margin-top: 2rem; text-align:left;">
+    <label for="region">Región:</label><br>
+    <input type="text" id="region" name="region" placeholder="Ej: Región Metropolitana" required><br><br>
+
+    <label for="ubicacion">Ubicación:</label><br>
+    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Av. Siempre Viva 123" required><br><br>
+
+    <label for="zona">Zona:</label><br>
+    <select id="zona" name="zona" required>
+      <option value="">Seleccionar zona</option>
+      <option value="norte">Norte</option>
+      <option value="sur">Sur</option>
+      <option value="este">Este</option>
+      <option value="oeste">Oeste</option>
+    </select><br><br>
+
+    <label for="servicio">Servicio afectado:</label><br>
+    <input type="text" id="servicio" name="servicio" placeholder="Ej: Alumbrado público, Basura..." required><br><br>
+
+    <label for="reporte">Descripción del problema:</label><br>
+    <textarea id="reporte" name="reporte" rows="4" placeholder="Describe el problema aquí..." required></textarea><br><br>
+
+    <label for="soporte">¿Tipo de soporte requerido? (opcional):</label><br>
+    <select id="soporte" name="soporte">
+      <option value="">Seleccionar</option>
+      <option value="urgente">Urgente</option>
+      <option value="normal">Normal</option>
+      <option value="consulta">Solo consulta</option>
+    </select><br><br>
+
+    <button type="submit">Enviar reporte</button>
+  </form>
+</section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Teléfono: +56 9 40318382</p>
+      <p>Correo: <a href="mailto:tucalleresponde@gmail.com">tucalleresponde@gmail.cl</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Tú Calle Responde – Todo fue desarrollado por José Ferrada, Martín Carrasco y Benjamín Morán. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
